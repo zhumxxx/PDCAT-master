@@ -16,7 +16,7 @@ It contains `constraints.txt`, `data.txt`, `tuning_flags.txt`, `PDCAT.py` and `P
 For PolyBench:  
 If you want to use it to tune program `symm`, you can run command `python PDCAT.py --log_file=symm_pdcat.log --source_path=Benchmarks/polyBench/linear-algebra/blas/symm --gcc_path=gcc --flag_path=tuning_flags.txt --sequences_path=data.txt --constraints_path=constraints.txt --permax=2.5 --permin=0.8`.  
 In this command, `--log_file` is your log file name, `--source_path` is your program path, `--gcc_path` is your compiler path, `--sequences_path` is initial tuning data, `--flag_path` is for your tuning optimization flags, and `--constraints_path` is for your constraints.   
-For cBench:
+For cBench:  
 If you want to use it to tune program `automotive_bitcount`, you can run command `python PDCAT_c.py --log_file=automotive_bitcount_pdcat.log --source_path=Benchmarks/cBench/automotive_bitcount/src --gcc_path=gcc --flag_path=tuning_flags.txt --sequences_path=data.txt --constraints_path=constraints.txt --permax=2.5 --permin=0.8 --exec_param=1125000`. 
 `--exec_param` is execution parameter.
 
@@ -28,7 +28,7 @@ It contains `tuning_flags.txt`, `CompTuner.py` and `CompTuner_c.py`.
 For PolyBench:  
 If you want to use it to tune program `correlation`, you can run command `python CompTuner.py --log_file=correlation_comptuner.log --source_path=Benchmarks/polyBench/datamining/correlation --gcc_path=gcc --flag_path=tuning_flags.txt`.  
 In this command, `--log_file` is your log file name, `--source_path` is your program path, `--gcc_path` is your compiler path, `--sequences_path` is initial tuning data, `--flag_path` is for your tuning optimization flags, and `--constraints_path` is for your constraints.   
-For cBench:
+For cBench:  
 If you want to use it to tune program `automotive_susan_c`, you can run command `python CompTuner_c.py --log_file=automotive_susan_c_compTuner.log --source_path=Benchmarks/cBench/automotive_susan_c/src --gcc_path=gcc --flag_path=tuning_flags.txt --exec_param="Benchmarks/cBench/automotive_susan_data/1.pgm output_large.corners.pgm -c"`. 
 `--exec_param` is execution parameter.
 
