@@ -1,0 +1,19 @@
+Strong dependency:
+-floop-unroll-and-jam -> -fforward-propagate
+-funroll-loops -> -fpeel-loops
+-fmodulo-sched -> -fmodulo-sched-allow-regmoves
+-fschedule-insns -> -fsched-pressure
+-fipa-cp -> -fipa-vrp
+Weak dependency:
+-fauto-profile -> -fpeel-loops
+-fauto-profile -> -fgcse-after-reload
+-fauto-profile -> -ftree-loop-distribute-patterns
+-fschedule-insns -> -fsched-interblock
+-fschedule-insns -> -fsched-spec-load
+-fschedule-insns -> -fsched-group-heuristic
+-fschedule-insns -> -fsched-critical-path-heuristic
+-fschedule-insns -> -fsched-spec-insn-heuristic
+-fschedule-insns -> -fsched-dep-count-heuristic
+-fschedule-insns -> -fsched-rank-heuristic
+Synergistic relationship:
+-fgcse-sm and -fgcse-lm
