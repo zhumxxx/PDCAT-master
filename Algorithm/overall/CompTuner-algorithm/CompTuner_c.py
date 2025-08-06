@@ -39,7 +39,7 @@ def get_objective_score(independent, k_iter, SOURCE_PATH, GCC_PATH, INCLUDE_PATH
             opt = opt + negated_flag_name + ' '
     command = f"{GCC_PATH} -O2 {opt} -c {INCLUDE_PATH} {SOURCE_PATH}/*.c"
     execute_terminal_command(command)
-    command2 = f"{GCC_PATH} -o a.out -O2 {opt}  *.o -lm"
+    command2 = f"{GCC_PATH} -o a.out -O2 {opt} *.o -lm"
     execute_terminal_command(command2)
     time_start = time.time()
     command3 = f"./a.out {EXEC_PARAM}"

@@ -39,7 +39,7 @@ def get_objective_score(independent, k_iter, SOURCE_PATH, GCC_PATH, INCLUDE_PATH
             opt = opt + negated_flag_name + ' '
     command = f"{GCC_PATH} -O2 {opt} -c {INCLUDE_PATH} {SOURCE_PATH}/*.c"
     execute_terminal_command(command)
-    command2 = f"{GCC_PATH} -o a.out -O2 {opt} *.o -lm "
+    command2 = f"{GCC_PATH} -o a.out -O2 {opt} *.o -lm"
     execute_terminal_command(command2)
     time_start = time.time()
     command3 = f"./a.out {EXEC_PARAM}"
@@ -51,7 +51,7 @@ def get_objective_score(independent, k_iter, SOURCE_PATH, GCC_PATH, INCLUDE_PATH
     time_o3 = time.time()
     command = f"{GCC_PATH} -O3 -c {INCLUDE_PATH} {SOURCE_PATH}/*.c"
     execute_terminal_command(command)
-    command2 = f"{GCC_PATH} -o a.out -O3 *.o -lm "
+    command2 = f"{GCC_PATH} -o a.out -O3 *.o -lm"
     execute_terminal_command(command2)
     time_o3 = time.time()
     command3 = f"./a.out {EXEC_PARAM}"
@@ -485,7 +485,7 @@ if __name__ == "__main__":
     com_params['random'] = 456
     com_params['source_path'] = args.source_path
     com_params['gcc_path'] = args.gcc_path
-    com_params['include_path'] = '-I /data/mingxuanzhu/Tuning/polytest/utilities /data/mingxuanzhu/Tuning/polytest/utilities/polybench.c'
+    com_params['include_path'] = '-I /data/mingxuanzhu/PDCAT-master/Benchmarks/polyBench/utilities /data/mingxuanzhu/PDCAT-master/Benchmarks/polyBench/utilities/polybench.c'
     com_params['exec_param'] = args.exec_param
     LOG_DIR = 'log' + os.sep
     LOG_FILE = LOG_DIR +  args.log_file

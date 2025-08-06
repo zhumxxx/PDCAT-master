@@ -14,22 +14,32 @@ It contains `constraints.txt`, `data.txt`, `tuning_flags.txt`, `PDCAT.py` and `P
 `tuning_flags.txt` contains the target optimization flags. You can modify or replace them as needed for tuning experiments.  
 `PDCAT.py` is the main file to tune programs from PolyBench and `PDCAT_c.py` is the main file to tune programs from cBench.  
 For PolyBench:  
-If you want to use it to tune program `symm`, you can run command `python PDCAT.py --log_file=symm_pdcat.log --source_path=Benchmarks/polyBench/linear-algebra/blas/symm --gcc_path=gcc --flag_path=tuning_flags.txt --sequences_path=data.txt --constraints_path=constraints.txt --permax=2.5 --permin=0.8`.  
+If you want to use it to tune program `symm`, you can run command `python PDCAT.py --log_file=symm_pdcat.log --source_path=/data/mingxuanzhu/PDCAT-master/Benchmarks/polyBench/linear-algebra/blas/symm --gcc_path=gcc --flag_path=tuning_flags.txt --sequences_path=data.txt --constraints_path=constraints.txt --permax=2.5 --permin=0.8`.  
 In this command, `--log_file` is your log file name, `--source_path` is your program path, `--gcc_path` is your compiler path, `--sequences_path` is initial tuning data, `--flag_path` is for your tuning optimization flags, and `--constraints_path` is for your constraints.   
 For cBench:  
-If you want to use it to tune program `automotive_bitcount`, you can run command `python PDCAT_c.py --log_file=automotive_bitcount_pdcat.log --source_path=Benchmarks/cBench/automotive_bitcount/src --gcc_path=gcc --flag_path=tuning_flags.txt --sequences_path=data.txt --constraints_path=constraints.txt --permax=2.5 --permin=0.8 --exec_param=1125000`. 
+If you want to use it to tune program `automotive_bitcount`, you can run command `python PDCAT_c.py --log_file=automotive_bitcount_pdcat.log --source_path=/data/mingxuanzhu/PDCAT-master/Benchmarks/cBench/automotive_bitcount/src --gcc_path=gcc --flag_path=tuning_flags.txt --sequences_path=data.txt --constraints_path=constraints.txt --permax=2.5 --permin=0.8 --exec_param=1125000`. 
 `--exec_param` is execution parameter.
 
 
-#### The `CompTuner.py` is the code for **Compiler Autotuning through Multiple Phase Learning**. 
+#### The `CompTuner-algorithm` is the code for **Compiler Autotuning through Multiple Phase Learning**. 
 It contains `tuning_flags.txt`, `CompTuner.py` and `CompTuner_c.py`.  
 `tuning_flags.txt` contains the target optimization flags. You can modify or replace them as needed for tuning experiments.  
 `CompTuner.py` is the main file to tune programs from PolyBench and `CompTuner_c.py` is the main file to tune programs from cBench.  
 For PolyBench:  
-If you want to use it to tune program `correlation`, you can run command `python CompTuner.py --log_file=correlation_comptuner.log --source_path=Benchmarks/polyBench/datamining/correlation --gcc_path=gcc --flag_path=tuning_flags.txt`.  
+If you want to use it to tune program `correlation`, you can run command `python CompTuner.py --log_file=correlation_comptuner.log --source_path=/data/mingxuanzhu/PDCAT-master/Benchmarks/polyBench/datamining/correlation --gcc_path=gcc --flag_path=tuning_flags.txt`.  
 In this command, `--log_file` is your log file name, `--source_path` is your program path, `--gcc_path` is your compiler path, `--sequences_path` is initial tuning data, `--flag_path` is for your tuning optimization flags, and `--constraints_path` is for your constraints.   
 For cBench:  
-If you want to use it to tune program `automotive_susan_c`, you can run command `python CompTuner_c.py --log_file=automotive_susan_c_compTuner.log --source_path=Benchmarks/cBench/automotive_susan_c/src --gcc_path=gcc --flag_path=tuning_flags.txt --exec_param="Benchmarks/cBench/automotive_susan_data/1.pgm output_large.corners.pgm -c"`. 
+If you want to use it to tune program `automotive_susan_c`, you can run command `python CompTuner_c.py --log_file=automotive_susan_c_compTuner.log --source_path=/data/mingxuanzhu/PDCAT-master/Benchmarks/cBench/automotive_susan_c/src --gcc_path=gcc --flag_path=tuning_flags.txt --exec_param="Benchmarks/cBench/automotive_susan_data/1.pgm output_large.corners.pgm -c"`. 
 `--exec_param` is execution parameter.
 
 
+#### The `RIO-algorithm` is the code for **Random Iterative Optimization**. 
+It contains `tuning_flags.txt`, `RIO.py` and `RIO_c.py`.  
+`tuning_flags.txt` contains the target optimization flags. You can modify or replace them as needed for tuning experiments.  
+`CompTuner.py` is the main file to tune programs from PolyBench and `CompTuner_c.py` is the main file to tune programs from cBench.  
+For PolyBench:  
+If you want to use it to tune program `correlation`, you can run command `python CompTuner.py --log_file=correlation_comptuner.log --source_path=/data/mingxuanzhu/PDCAT-master/Benchmarks/polyBench/datamining/correlation --gcc_path=gcc --flag_path=tuning_flags.txt`.  
+In this command, `--log_file` is your log file name, `--source_path` is your program path, `--gcc_path` is your compiler path, `--sequences_path` is initial tuning data, `--flag_path` is for your tuning optimization flags, and `--constraints_path` is for your constraints.   
+For cBench:  
+If you want to use it to tune program `automotive_susan_c`, you can run command `python CompTuner_c.py --log_file=automotive_susan_c_compTuner.log --source_path=/data/mingxuanzhu/PDCAT-master/Benchmarks/cBench/automotive_susan_c/src --gcc_path=gcc --flag_path=tuning_flags.txt --exec_param="Benchmarks/cBench/automotive_susan_data/1.pgm output_large.corners.pgm -c"`. 
+`--exec_param` is execution parameter.
