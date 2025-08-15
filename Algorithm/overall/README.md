@@ -56,3 +56,12 @@ In this command, `--log_file` is your log file name, `--source_path` is your pro
 For cBench:  
 If you want to use it to tune program `automotive_susan_c`, you can run command `python CSFCA_c.py --log_file=automotive_susan_c_cfsca.log --source_path=/data/mingxuanzhu/PDCAT-master/Benchmarks/cBench/automotive_susan_c/src --gcc_path=gcc --flag_path=tuning_flags.txt --related_flags=1,2,3,4,5,6,7,8,9,10 --exec_param="Benchmarks/cBench/automotive_susan_data/1.pgm output_large.corners.pgm -c"`. 
 `--exec_param` is execution parameter.
+
+
+#### The `SRTuner-algorithm` is the code for **Effective Compiler Optimization Customization by Exposing Synergistic Relations**.  
+For PolyBench:  
+If you want to use it to tune program `correlation`, you can run command `python tune.py --log_file=correlation_srtuner.log --source_path=/data/mingxuanzhu/PDCAT-master/Benchmarks/polyBench/datamining/correlation --gcc_path=gcc --flag_path=tuning_flags.txt`.  
+In this command, `--log_file` is your log file name, `--source_path` is your program path, `--gcc_path` is your compiler path, `--flag_path` is for your tuning optimization flags, and `--related_flags` are the indexs of the related flags.   
+For cBench:  
+If you want to use it to tune program `automotive_susan_c`, you can run command `python CSFCA_c.py --log_file=automotive_susan_c_srtuner.log --source_path=/data/mingxuanzhu/PDCAT-master/Benchmarks/cBench/automotive_susan_c/src --gcc_path=gcc --flag_path=tuning_flags.txt --exec_param="Benchmarks/cBench/automotive_susan_data/1.pgm output_large.corners.pgm -c"`. 
+`--exec_param` is execution parameter.
